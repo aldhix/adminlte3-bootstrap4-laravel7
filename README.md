@@ -39,9 +39,11 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 | icon | string | Icon Item sub menu fonts Awesome |
  
 ## Form (form-card)
-Untuk membuat form menggunakan tag `<x-admin.form-card>` untuk attibutnya menggunakan atribut form html dan penambahan attribut `type` adalah untuk memberi warna card header sesuai warna yang terdapat pada bootstrap contoh : primary, warning etc. Selain attribut form pada tag ini ada **slot** diletakan pada card body fungsi slot ini untuk menyisipkan component-component input,textarea,button,select etc. 
+Membuat form menggunakan tag `<x-admin.form-card>` untuk attibutnya menggunakan atribut form html dan penambahan attribut `type` adalah untuk memberi warna card header sesuai warna yang terdapat pada bootstrap contoh : primary, warning etc. Selain attribut form pada tag ini ada **slot** diletakan pada card body fungsi slot ini untuk menyisipkan component-component input,textarea,button,select etc. 
 
 Selain slot utama ada tambahan lainya diantaranya slot header dengan tag `<x-slot name="header">` digunakan untuk memberi label card header, slot lainya slot footer diletakan dibagian card footer dengan menggunakan tag `<x-slot name="footer">`.
+
+Untuk melengkapi form diperlukan tag lain seperti input, button, textarea etc. dibawah ini ada beberapa component tambahan untuk input yang sudah dilengkapi dengan form-group dan error laravel.
 
 ### Input
 Tag input menggunakan `<x-admin.input />`
@@ -87,3 +89,23 @@ Tag button menggunakan `<x-admin.button>`, pada tag ini terdapat slot yang disis
 | btn | string | Warna button menggunakan warna pada bootstrap, contoh : primary,warning,success etc.  |
 
 Selain atribut diatas bisa menggunakan atribut button dan a html lainnya.
+
+## Table (table-card)
+Table tag untuk membuat tabel penulisannya `<x-admin.table-card>`, selain tag utama adanya slot utama digunakan untuk menyisipkan tag `<tr>` dan `<td>` sebagai data utama. Selain slot utama ada slot tambahan yaitu thead `<x-slot name="thead">` berfungsi untuk kolom judul, slot tambahan lainnya untuk footer dengan tag `<x-slot name="footer">`.
+
+Component lainnya yang dibutuhkan pada table-card ini adalah component **action** yang berfungsi memberikan tiga tombol utama yaitu edit,view dan delete. Serta modal delete sudah ada pada bagian component ini.
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| label | string | Nama label card table |
+| search | false|true | Mengaktifkan input search nilai atribut `name` adalah `keyword` |
+
+### Action
+Tag action untuk membuat tombol aksi yang diantaranya Edit, View dan Delete penulisannya `<x-admin.action>` yang disimpan diantara tag `<td>`.
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| size | sm|md|lg | Ukuran tabel berdasarkan ketentuan ukuran boostrap |
+| edit | string | Url link ke halaman edit |
+| view | string | Url link ke halaman view |
+| delete | string | Url link ke halaman delete, yang akan menampilkan modal sebelum terjadi selanjutnya |
