@@ -38,4 +38,5 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 | href | string | Url item sub menu |
 | icon | string | Icon Item sub menu fonts Awesome |
  
-
+## Form (form-card)
+Untuk membuat form menggunakan tag `<x-admin.form-card>` untuk attibutnya menggunakan atribut form html dan penambahan attribut `type` adalah untuk memberi warna card header sesuai warna yang terdapat pada bootstrap contoh : primary, warning etc. Selain attribut form pada tag ini ada **slot** diletakan pada card body, slot tambahan ada slot header dengan tag `<x-slot name="header">` digunakan untuk membeli label card header. Tambahan slot lainya ada slot pada bagian footer menggunakan tag `<x-slot name="footer">` untuk menambahkan perintah pada card footer.
