@@ -2,7 +2,11 @@
 # AdminLTE 3 Bootstrap 4.5 Laravel 7
 Paket component AdminLTE yang di conversi kedalam bentuk blade Laravel
 
-## Using 
+## Instalation
+
+Setelah download dan di extract, copy folder public, resource dan view kemudian replace di path/root laravel 7. 
+
+## Includes 
 - AdminLTE v3.0.5 ( include Bootstrap v4.4.1 )
 - Font Awesome Free 5.13.0
 - jQuery v3.4.1
