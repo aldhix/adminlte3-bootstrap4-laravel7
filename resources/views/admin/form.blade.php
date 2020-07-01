@@ -4,7 +4,7 @@
 @section('content')
 <div class="row">
     <div class="col-6">
-      <x-admin.form-card>
+      <x-admin.form-card method="post">
         <x-slot name="header">Quick Example</x-slot>
          @csrf()
         <x-admin.input label="Nama" name="nama" />
