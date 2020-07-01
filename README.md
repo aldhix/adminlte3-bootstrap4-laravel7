@@ -76,3 +76,12 @@ Tag select menggunakan `<x-admin.select />`, pada tag ini terdapat slot yang dig
 
 Selain atribut diatas bisa menggunakan atribut select html lainnya.
 
+### Button 
+Tag button menggunakan `<x-admin.button>`, pada tag ini terdapat slot yang disisipkan diantara tag button atau achor (a).
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| type | submit,button,link | Type-type button, untuk type link tag yang digunakan menggunakan tag achor (a)  |
+| btn | string | Warna button menggunakan warna pada bootstrap, contoh : primary,warning,success etc.  |
+
+Selain atribut diatas bisa menggunakan atribut button dan a html lainnya.
