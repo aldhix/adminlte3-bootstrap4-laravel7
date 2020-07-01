@@ -4,7 +4,7 @@
     <div class="card-header">
       <h3 class="card-title">{{ $header }}</h3>
     </div>
-    <form method="{{$method}}">
+    <form {{$attributes}}>
     	<div class="card-body">
     		{{$slot}}
     	</div>
