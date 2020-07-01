@@ -13,12 +13,13 @@ Pada sidebar dibagi menjadi 3 bagian include yaitu brand, user, dan menu. Pada M
 ### Sidebar Menu
 Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin.template.sidebar.menu>`
 
-| Atribut | Type | Keterangan |
+| Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
 | label | string | Nama menu atau Label item menu |
 | href | string | Url item menu |
+| icon | string | Icon Item menu fonts Awesome |
 | has-treeview | true|false | Mengaktifkan submenu |
-| is | string | uri menu parent dari submenu |
+| is | string | Uri menu parent dari submenu |
 | badge | string | label pada Badge |
 | badge-type | bootstrap color | Warna badge berdasarkan warna yang terdapat pada bootstrap contoh:primary,warning etc. |
 
@@ -31,5 +32,10 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 
  `</x-admin.template.sidebar.menu>`
  
+ | Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| label | string | Nama menu atau Label item sub menu |
+| href | string | Url item sub menu |
+| icon | string | Icon Item sub menu fonts Awesome |
  
 
