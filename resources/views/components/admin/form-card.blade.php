@@ -1,8 +1,8 @@
-@props(['type'=>'primary','header'=>'','footer'=>''])
+@props(['type'=>'primary','cardTitle'=>'','footer'=>''])
 
 <div class="card card-{{$type}}">
     <div class="card-header">
-      <h3 class="card-title">{{ $header }}</h3>
+      <h3 class="card-title">{{ $cardTitle }}</h3>
     </div>
     <form {{$attributes}}>
     	<div class="card-body">
