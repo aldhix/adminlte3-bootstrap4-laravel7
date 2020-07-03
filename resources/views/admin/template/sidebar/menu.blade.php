@@ -1,7 +1,7 @@
 <x-admin.template.sidebar.menu 
  label="Dasboard" 
  icon="fas fa-tachometer-alt" 
- href="{{route('home')}}" />
+ href="{{route('admin.dashboard')}}" />
 
 <li class="nav-header">COMPONENTS</li>
 
