@@ -18,6 +18,7 @@ Setelah download dan di extract, copy folder public, resource dan view kemudian 
 - Sidebar
 - Form
 - Table
+- Alert
 
 ## Sidebar
 Pada sidebar dibagi menjadi 3 bagian include yaitu brand, user, dan menu. Pada Menu terdapat dua buah komponen yang digunakan yaitu sidebar menu dan sidebar submenu.
@@ -58,7 +59,7 @@ Selain slot utama ada tambahan lainya diantaranya slot header dengan tag `<x-slo
 Untuk melengkapi form diperlukan tag lain seperti input, button, textarea etc. dibawah ini ada beberapa component tambahan untuk input yang sudah dilengkapi dengan form-group dan error laravel.
 
 ### Input
-Tag input menggunakan `<x-admin.input />`
+Tag input menggunakan `<x-admin.input />`, terdapat dua buah slot tambahan untuk menempatkan input group text, input group prepend menggunakan perintah `<x-slot name="prepend">`, sedangkan input group append menggunakan perintah `<x-slot name="append">`.
 
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
@@ -66,6 +67,10 @@ Tag input menggunakan `<x-admin.input />`
 | type | string | Type input contoh : text, email, password etc. |
 | name | string | name atribut input pada umumnya |
 | value | string | value sebuah atribut nilai input pada umumnya |
+| inline | true,false | Inline coloum form-group |
+| form-group | true|false | Mengaktifkan form group, default true |
+| col-label | string | width untuk coloum label |
+| col-input | string | width untuk coloum input |
 
 Selain atribut diatas bisa menggunakan atribut input html lainnya.
 
@@ -77,11 +82,15 @@ Tag textarea menggunakan `<x-admin.textarea />`
 | label | string | Nama label textarea |
 | name | string | name atribut textarea pada umumnya |
 | value | string | value sebuah atribut nilai textarea |
+| inline | true,false | Inline coloum form-group |
+| form-group | true|false | Mengaktifkan form group, default true |
+| col-label | string | width untuk coloum label |
+| col-input | string | width untuk coloum input |
 
 Selain atribut diatas bisa menggunakan atribut textarea html lainnya.
 
 ### Select
-Tag select menggunakan `<x-admin.select />`, pada tag ini terdapat slot yang digunakan pada label option pertama (default).
+Tag select menggunakan `<x-admin.select />`, pada tag ini terdapat slot yang digunakan pada label option pertama (default). Terdapat dua buah slot tambahan untuk menempatkan input group text, input group prepend menggunakan perintah `<x-slot name="prepend">`, sedangkan input group append menggunakan perintah `<x-slot name="append">`.
 
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
@@ -89,6 +98,10 @@ Tag select menggunakan `<x-admin.select />`, pada tag ini terdapat slot yang dig
 | name | string | name atribut select pada umumnya |
 | value | string | value sebuah atribut nilai select default |
 | option | array | Option pada tag select dengan ketentuan field array **value** dan **label**, contoh : `[ ['value'=>'0','label'=>'Female'], ['value'=>'1','label'=>'Male'] ]`   |
+| inline | true,false | Inline coloum form-group |
+| form-group | true,false | Mengaktifkan form group, default true |
+| col-label | string | width untuk coloum label |
+| col-input | string | width untuk coloum input |
 
 Selain atribut diatas bisa menggunakan atribut select html lainnya.
 
@@ -110,7 +123,7 @@ Component lainnya yang dibutuhkan pada table-card ini adalah component **action*
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
 | label | string | Nama label card table |
-| search | false|true | Mengaktifkan input search nilai atribut `name` adalah `keyword` |
+| search | false,true | Mengaktifkan input search nilai atribut `name` adalah `keyword` |
 
 ### Action
 Tag action untuk membuat tombol aksi yang diantaranya Edit, View dan Delete penulisannya `<x-admin.action>` yang disimpan diantara tag `<td>`.
