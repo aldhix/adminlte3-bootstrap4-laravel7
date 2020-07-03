@@ -4,7 +4,7 @@
 @section('content')
 <div class="row">
     <div class="col-12">
-      <x-admin.table search='true'>
+      <x-admin.table search='true' title="Data">
         <x-slot name="thead">
           <th>#</th><th>Nama</th><th>Action</th>
         </x-slot>

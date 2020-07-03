@@ -16,7 +16,7 @@
     
     <div class="col-6">
       <x-admin.form-card method="post">
-        <x-slot name="header">Quick Example</x-slot>
+        <x-slot name="title">Quick Example</x-slot>
         
          @csrf()
         
@@ -52,7 +52,7 @@
 
     <div class="col-6">
       <x-admin.form-card method="post" type="warning">
-        <x-slot name="header">Quick Example</x-slot>
+        <x-slot name="title">Quick Example</x-slot>
         
          @csrf()
         
