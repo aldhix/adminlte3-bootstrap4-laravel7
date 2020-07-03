@@ -6,7 +6,7 @@ Paket component AdminLTE yang di conversi kedalam bentuk blade Laravel
 
 ## Instalation
 
-Setelah download dan di extract, copy folder public, resource dan view kemudian replace di path/root laravel 7. 
+Setelah download dan di extract, copy folder public, resource dan view kemudian replace di path/root laravel 7. Kemudian untuk melihat tampilannya http://localhost:8000/admin
 
 ## Includes 
 - AdminLTE v3.0.5 ( include Bootstrap v4.4.1 )
