@@ -45,18 +45,22 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 
  `</x-admin.template.sidebar.menu>`
  
- | Attribut | Type | Keterangan |
+| Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
 | label | string | Nama menu atau Label item sub menu |
 | href | string | Url item sub menu |
 | icon | string | Icon Item sub menu fonts Awesome |
  
 ## Form (form-card)
-Membuat form menggunakan tag `<x-admin.form-card>` untuk attibutnya menggunakan atribut form html dan penambahan attribut `type` adalah untuk memberi warna card header sesuai warna yang terdapat pada bootstrap contoh : primary, warning etc. Selain attribut form pada tag ini ada **slot** diletakan pada card body fungsi slot ini untuk menyisipkan component-component input,textarea,button,select etc. 
+Membuat form menggunakan tag `<x-admin.form-card>`, Form pada tag ini ada **slot** diletakan pada card body fungsi slot ini untuk menyisipkan component-component input,textarea,button,select etc. 
 
 Selain slot utama ada tambahan lainya diantaranya slot header dengan tag `<x-slot name="header">` digunakan untuk memberi label card header, slot lainya slot footer diletakan dibagian card footer dengan menggunakan tag `<x-slot name="footer">`.
 
 Untuk melengkapi form diperlukan tag lain seperti input, button, textarea etc. dibawah ini ada beberapa component tambahan untuk input yang sudah dilengkapi dengan form-group dan error laravel.
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| type| string | Jenis warna pada bootstrap, contoh : primary, warning etc. defautlnya primary |
 
 ### Input
 Tag input menggunakan `<x-admin.input />`, terdapat dua buah slot tambahan untuk menempatkan input group text, input group prepend menggunakan perintah `<x-slot name="prepend">`, sedangkan input group append menggunakan perintah `<x-slot name="append">`.
@@ -130,7 +134,14 @@ Tag action untuk membuat tombol aksi yang diantaranya Edit, View dan Delete penu
 
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
-| size | sm|md|lg | Ukuran tabel berdasarkan ketentuan ukuran boostrap |
+| size | sm,md,lg | Ukuran tabel berdasarkan ketentuan ukuran boostrap |
 | edit | string | Url link ke halaman edit |
 | view | string | Url link ke halaman view |
 | delete | string | Url link ke halaman delete, yang akan menampilkan modal sebelum terjadi selanjutnya |
+
+## Alert
+Perintah menggunakan alert adalah `<x-admin.alert>`, telah dilengkapai dengan close button, slot utama untuk memberikan text/string.
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| type| string | Jenis warna pada bootstrap, contoh : primary, warning etc. defautlnya primary |
