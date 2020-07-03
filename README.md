@@ -127,7 +127,7 @@ Component lainnya yang dibutuhkan pada table-card ini adalah component **action*
 
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
-| label | string | Nama label card table |
+| title | string | Memberi judul table |
 | search | false,true | Mengaktifkan input search nilai atribut `name` adalah `keyword` |
 
 ### Action
