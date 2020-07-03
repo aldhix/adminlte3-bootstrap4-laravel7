@@ -60,6 +60,7 @@ Untuk melengkapi form diperlukan tag lain seperti input, button, textarea etc. d
 
 | Attribut | Type | Keterangan |
 | ----------- | ----------- | ----------- |
+| title | string | Memberi judul form |
 | type| string | Jenis warna pada bootstrap, contoh : primary, warning etc. defautlnya primary |
 
 ### Input
