@@ -39,10 +39,8 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 ### Sidebar Submenu
 Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin.template.sidebar.submenu />`, ditempatkan diantara tag item sidebar menu, contoh :
 
-`<x-admin.template.sidebar.menu>`
-
-    <x-admin.template.sidebar.submenu />
-
+`<x-admin.template.sidebar.menu>`<br />
+    `<x-admin.template.sidebar.submenu />` <br />
  `</x-admin.template.sidebar.menu>`
  
 | Attribut | Type | Keterangan |
@@ -54,7 +52,7 @@ Sidebar menu adalah component item menu sidebar dengan menggunakan tag `<x-admin
 ## Form (form-card)
 Membuat form menggunakan tag `<x-admin.form-card>`, Form pada tag ini ada **slot** diletakan pada card body fungsi slot ini untuk menyisipkan component-component input,textarea,button,select etc. 
 
-Selain slot utama ada tambahan lainya diantaranya slot header dengan tag `<x-slot name="header">` digunakan untuk memberi label card header, slot lainya slot footer diletakan dibagian card footer dengan menggunakan tag `<x-slot name="footer">`.
+Selain slot utama ada tambahan lainya slot footer diletakan dibagian card footer dengan menggunakan tag `<x-slot name="footer">`.
 
 Untuk melengkapi form diperlukan tag lain seperti input, button, textarea etc. dibawah ini ada beberapa component tambahan untuk input yang sudah dilengkapi dengan form-group dan error laravel.
 
@@ -120,8 +118,22 @@ Tag button menggunakan `<x-admin.button>`, pada tag ini terdapat slot yang disis
 
 Selain atribut diatas bisa menggunakan atribut button dan a html lainnya.
 
+## Input Image
+Tag input image `<x-admin.input-img>`, tag ini dilengkapi dengan fitur priview dan dimensi minimal witdh dan height dengan bertype file.
+
+| Attribut | Type | Keterangan |
+| ----------- | ----------- | ----------- |
+| label | string | Nama label textarea |
+| name | string | name atribut textarea pada umumnya |
+| inline | true,false | Inline coloum form-group |
+| form-group | true|false | Mengaktifkan form group, default true |
+| col-label | string | width untuk coloum label |
+| col-input | string | width untuk coloum input |
+| width | number | minimal width dimension image  |
+| height | number | minimal height dimension image  |
+
 ## Table (table-card)
-Table tag untuk membuat tabel penulisannya `<x-admin.table-card>`, selain tag utama adanya slot utama digunakan untuk menyisipkan tag `<tr>` dan `<td>` sebagai data utama. Selain slot utama ada slot tambahan yaitu thead `<x-slot name="thead">` berfungsi untuk kolom judul, slot tambahan lainnya untuk footer dengan tag `<x-slot name="footer">`.
+Table tag untuk membuat tabel penulisannya `<x-admin.table-card>`, selain tag utama adanya slot utama digunakan untuk menyisipkan tag `<tr>` dan `<td>` sebagai data utama. Selain slot utama ada slot tambahan yaitu slot header untuk menryisipkan string dibagian header perintahnya `<x-slot name="header`>, berikutnya slot tambahan lainnya slot thead `<x-slot name="thead">` berfungsi untuk kolom judul, slot tambahan lainnya untuk footer dengan tag `<x-slot name="footer">`.
 
 Component lainnya yang dibutuhkan pada table-card ini adalah component **action** yang berfungsi memberikan tiga tombol utama yaitu edit,view dan delete. Serta modal delete sudah ada pada bagian component ini.
 
