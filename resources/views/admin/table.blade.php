@@ -5,6 +5,9 @@
 <div class="row">
     <div class="col-12">
       <x-admin.table search='true' title="Data">
+        <x-slot name="header">
+          <a href="#" class="btn btn-primary btn-sm">[+] Create New</a>
+        </x-slot>
         <x-slot name="thead">
           <th>#</th><th>Nama</th><th>Action</th>
         </x-slot>

@@ -1,24 +1,24 @@
 @props(['size'=>'sm','edit'=>null,'view'=>null,'delete'=>null])
 
-@if($edit!=null)
-<a href="{{$edit}}" class="btn btn-warning btn-{{$size}}"><i class="fas fa-edit"></i></a>
+@if($view!=null)
+<a href={{$view}} class="text-secondary" title="Show"><i class="far fa-eye mr-2"></i></a>
 @endif
 
-@if($view!=null)
-<a href={{$view}} class="btn btn-success btn-{{$size}}"><i class="fas fa-eye"></i></a>
+@if($edit!=null)
+<a href="{{$edit}}" class="text-secondary" title="View"><i class="far fa-edit mr-2"></i></a>
 @endif
 
 @if($delete!=null)
-<button type="button" data-url="{{$delete}}" class="btn btn-delete btn-danger btn-{{$size}}">
-	<i class="fas fa-trash"></i>
-</button>
+<a href="javascript:;" data-url="{{$delete}}" class="text-secondary btn-delete" title="Delete">
+  <i class="far fa-trash-alt"></i>
+</a>
 
 @push('modal')
 <div class="modal fade" id="modal-delete">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title"><i class="fas fa-trash"></i> Delete</h4>
+        <h4 class="modal-title"><i class="far fa-trash-alt"></i> Delete</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

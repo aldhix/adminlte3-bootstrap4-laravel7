@@ -10,11 +10,11 @@
 
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="fas fa-user"></i> Username
+        <i class="fas fa-users-cog"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <a href="#" class="dropdown-item">
-          <i class="far fa-id-badge mr-2"></i> My Profile
+          <i class="fas fa-user mr-2"></i> My Profile
         </a>
          <a href="{{ route('admin.about') }}" class="dropdown-item">
           <i class="fas fa-exclamation-circle mr-2"></i> About

@@ -19,7 +19,7 @@
         <x-slot name="title">Quick Example</x-slot>
         
          @csrf()
-        
+
         <x-admin.input label="Nama" name="nama">
           <x-slot name="append"><i class="fas fa-user"></i></x-slot>
         </x-admin.input>
@@ -51,11 +51,13 @@
     </div>
 
     <div class="col-6">
-      <x-admin.form-card method="post" type="warning">
+      <x-admin.form-card method="post" type="warning" enctype="multipart/form-data">
         <x-slot name="title">Quick Example</x-slot>
         
          @csrf()
         
+        <x-admin.input-img label="Image" name="image" inline="true" />
+
         <x-admin.input label="Nama" name="nama" inline="true" />
 
         <?php $option = [

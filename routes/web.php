@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function() {
 				'password'=>'required',
 				'alamat'=>'required',
 				'jenis_kelamin'=>'required',
+				'image'=>'required|image|dimensions:width=120,height=120',
 			]);
 		return 'Saved';
 	});

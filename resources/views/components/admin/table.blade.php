@@ -1,9 +1,9 @@
-@props(['title'=>'','search'=>false,'footer'=>''])
+@props(['header'=>'','search'=>false,'footer'=>''])
 
 <div class="card">
-@if($title != '' or $search)
+@if($header != '' or $search)
   <div class="card-header">
-    <h3 class="card-title">{{$title}}</h3>
+    {{ $header }}
     <div class="card-tools">
     @if($search)
       <form action="?">
