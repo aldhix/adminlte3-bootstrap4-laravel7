@@ -13,6 +13,7 @@ Setelah download dan di extract, copy folder public, resource dan view kemudian 
 - Font Awesome Free 5.13.0
 - jQuery v3.4.1
 - Laravel 7 (Blade)
+- Bootstrap File Input
 
 ## Components
 - Sidebar
@@ -118,19 +119,6 @@ Tag button menggunakan `<x-admin.button>`, pada tag ini terdapat slot yang disis
 
 Selain atribut diatas bisa menggunakan atribut button dan a html lainnya.
 
-## Input Image
-Tag input image `<x-admin.input-img>`, tag ini dilengkapi dengan fitur priview dan dimensi minimal witdh dan height dengan bertype file.
-
-| Attribut | Type | Keterangan |
-| ----------- | ----------- | ----------- |
-| label | string | Nama label textarea |
-| name | string | name atribut textarea pada umumnya |
-| inline | true,false | Inline coloum form-group |
-| form-group | true|false | Mengaktifkan form group, default true |
-| col-label | string | width untuk coloum label |
-| col-input | string | width untuk coloum input |
-| width | number | minimal width dimension image  |
-| height | number | minimal height dimension image  |
 
 ## Table (table-card)
 Table tag untuk membuat tabel penulisannya `<x-admin.table-card>`, selain tag utama adanya slot utama digunakan untuk menyisipkan tag `<tr>` dan `<td>` sebagai data utama. Selain slot utama ada slot tambahan yaitu slot header untuk menryisipkan string dibagian header perintahnya `<x-slot name="header`>, berikutnya slot tambahan lainnya slot thead `<x-slot name="thead">` berfungsi untuk kolom judul, slot tambahan lainnya untuk footer dengan tag `<x-slot name="footer">`.
