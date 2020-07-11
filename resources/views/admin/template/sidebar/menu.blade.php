@@ -10,6 +10,12 @@
  icon="far fa-list-alt "
  :href="route('admin.form')" />
 
+
+ <x-admin.template.sidebar.menu 
+ label="Upload" 
+ icon="fas fa-image "
+ :href="route('admin.upload')" />
+
  <x-admin.template.sidebar.menu 
  label="Tabel" 
  icon="fas fa-th-list "

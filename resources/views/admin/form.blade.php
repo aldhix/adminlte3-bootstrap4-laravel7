@@ -56,7 +56,13 @@
         
          @csrf()
         
-        <x-admin.input-img label="Image" name="image" inline="true" />
+
+        <div class="form-group">
+            <input id="input-image" name="images" type="file" class="file form-control" data-browse-on-zone-click="true">
+            @error('images')
+              <div class="text-danger">{{ $message }}</div>
+            @enderror  
+        </div>
 
         <x-admin.input label="Nama" name="nama" inline="true" />
 
@@ -78,3 +84,29 @@
 </div>
 
 @endsection
+
+@push('css')
+<link href="{{url('bootstrap-fileinput/css/fileinput.min.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{url('bootstrap-fileinput/themes/explorer/theme.min.css')}}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  .file-upload-indicator{
+    display: none;
+  }
+</style>
+@endpush
+
+@push('js')
+<script src="{{url('bootstrap-fileinput/js/fileinput.min.js')}}"></script>
+<script src="{{url('bootstrap-fileinput/themes/fas/theme.min.js')}}"></script>
+<script src="{{url('bootstrap-fileinput/themes/explorer-fas/theme.min.js')}}"></script>
+<script type="text/javascript">
+    
+ $('#input-image').fileinput({
+    theme: 'fas',
+    showUpload: false,
+    maxFileCount: 4,
+    allowedFileExtensions: ['jpg', 'png', 'gif','jpeg'],
+});
+
+</script>
+@endpush

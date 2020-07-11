@@ -34,9 +34,35 @@ Route::group(['prefix' => 'admin'], function() {
 				'password'=>'required',
 				'alamat'=>'required',
 				'jenis_kelamin'=>'required',
-				'image'=>'required|image|dimensions:width=120,height=120',
+				'images'=>'required|image|dimensions:width=300,height=300',
+			],[
+        		'images.dimensions' => 'The image has invalid image dimensions.',
+    		]);
+
+		return 'Success';
+
+	});
+
+	Route::view('/upload','admin.upload')->name('admin.upload');
+
+	Route::post('/upload', function(Illuminate\Http\Request $request) {
+
+	   	$request->validate([
+				'images.*'=>'required|image|dimensions:min_width=300,min_height=300',
 			]);
-		return 'Saved';
+
+	   	if( !empty($request->images) ) {
+
+			foreach ($request->images as $i => $k) {
+				echo $request->file('images.'.$i)->getClientOriginalName()."<br />";
+			}
+		} else {
+			return redirect()
+                ->back()
+                ->withInput()
+                ->withErrors(['images.*'=>"The image field is required."]);
+		}
+
 	});
 
 	Route::view('/table','admin.table')->name('admin.table');
