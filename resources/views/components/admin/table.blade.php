@@ -1,4 +1,4 @@
-@props(['header'=>'','search'=>false,'footer'=>''])
+@props(['search'=>false,'footer'=>'','header'=>'','headerCustom'=>false])
 
 <div class="card">
 @if($header != '' or $search)
@@ -22,11 +22,15 @@
   </div>
   @endif
   <div class="card-body table-responsive p-0">
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-striped table-sm">
       <thead>
+      @if(!$headerCustom)
         <tr>
           {{$thead}}
-        </tr>  
+        </tr>
+      @else
+        {{$thead}}
+      @endif
       </thead>
       <tbody>
         {{$slot}}

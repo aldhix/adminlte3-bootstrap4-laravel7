@@ -42,6 +42,10 @@
         </x-admin.input>
         
         <x-admin.textarea label="Alamat" name="alamat" rows="5" />
+
+        <x-admin.input prepend="Input Group Button" name="input_group" append-type="button" append="Ok!">
+          <x-slot name="appendBtnAttr"> onclick="alert('Ok Click Button!')" </x-slot>
+        </x-admin.input>
         
         <x-slot name="footer">
           <x-admin.button btn="primary">Simpan</x-admin.button>
