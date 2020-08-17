@@ -1,4 +1,4 @@
-@props(['dataTabs'=>[],'active'=>'','header'=>'','classBody'=>''])
+@props(['dataTabs'=>[],'active'=>'','header'=>'','classBody'=>'','footer'=>''])
 
 <div class="card card-primary card-tabs">
   <div class="card-header p-0 pt-1">
@@ -14,5 +14,10 @@
   <div class="card-body {{$classBody}}">
     {{ $slot }}
   </div>
+  @if($footer != '')
+  <div class="card-footer">
+    {{$footer}}
+  </div>
+  @endif
 </div>
 <!-- /.card -->
